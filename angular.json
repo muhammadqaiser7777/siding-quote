@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "siding-quote": {
+    "bath-quote": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -33,13 +33,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "10kb",
+                  "maximumError": "20kb"
                 }
               ],
               "outputHashing": "all"
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "siding-quote:build:production"
+              "buildTarget": "bath-quote:build:production"
             },
             "development": {
-              "buildTarget": "siding-quote:build:development"
+              "buildTarget": "bath-quote:build:development"
             }
           },
           "defaultConfiguration": "development"
