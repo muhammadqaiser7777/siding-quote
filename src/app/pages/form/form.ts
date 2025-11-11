@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class Form implements OnInit {
   currentStep: number = 1;
   totalSteps: number = 9;
-  bathtype: string = '';
+  Sidingtype: string = '';
   ProjectNature: string = '';
   homeOwner: string = '';
   propertyType: string = '';
@@ -326,8 +326,8 @@ export class Form implements OnInit {
   validateCurrentStep(): boolean {
     let valid = true;
     if (this.currentStep === 1) {
-      if (!this.bathtype) {
-        this.errors['bathtype'] = 'Please select a service.';
+      if (!this.Sidingtype) {
+        this.errors['Sidingtype'] = 'Please select a service.';
         valid = false;
       }
       if (!this.ProjectNature) {
@@ -408,7 +408,7 @@ export class Form implements OnInit {
         valid = false;
       }
       if (!this.BriefRequirement.trim()) {
-        this.errors['BriefRequirement'] = 'Please provide a brief description of your bathroom remodeling needs.';
+        this.errors['BriefRequirement'] = 'Please provide a brief description of your siding needs.';
         valid = false;
       }
     } else if (this.currentStep === 9) {
@@ -474,7 +474,7 @@ export class Form implements OnInit {
       this.xxTrustedFormCertUrl = (document.querySelector('input[name="xxTrustedFormCertUrl"]') as HTMLInputElement)?.value || '';
 
       const payload = {
-        bathtype: parseInt(this.bathtype),
+        Sidingtype: parseInt(this.Sidingtype),
         ProjectNature: parseInt(this.ProjectNature),
         homeOwner: parseInt(this.homeOwner),
         Propertytype: parseInt(this.propertyType),
@@ -500,7 +500,7 @@ export class Form implements OnInit {
         url: window.location.href,
         browser: navigator.userAgent
       };
-      this.http.post('https://get-bath.com/api/ping-proxy.php', payload).subscribe({
+      this.http.post('https://get-siding.com/api/ping-proxy.php', payload).subscribe({
         next: (response) => {
           this.isSubmitting = false;
           this.showThankYou = true;

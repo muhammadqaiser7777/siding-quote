@@ -4,26 +4,28 @@
   <div class="roof-form" [ngClass]="'step-' + currentStep">
     <div class="header">
       <img src="assets/images/form-logo.webp" alt="Form Logo" class="form-logo">
-      <h1>Get your bathroom remodeling quote</h1>
+      <h1>Get your Siding quote</h1>
     </div>
     <div class="questions" *ngIf="currentStep === 1">
       <div class="question">
-        <label for="bathtype">What bathroom service do you need?</label>
-        <select id="bathtype" [(ngModel)]="bathtype" name="bathtype" required>
+        <label for="Sidingtype">What siding service do you need?</label>
+        <select id="Sidingtype" [(ngModel)]="Sidingtype" name="Sidingtype" required>
           <option value="">Select an option</option>
-          <option value="1">BathTub Install</option>
-          <option value="2">Cabinets</option>
-          <option value="3">Counter Tops</option>
-          <option value="4">New Flooring</option>
-          <option value="5">Shower Install</option>
-          <option value="6">Sink Install</option>
-          <option value="7">Toilet Install</option>
-          <option value="8">Walk-In Tub Install</option>
-          <option value="9">Complete Bathroom Remodel</option>
-          <option value="10">Vanity Install / Repair</option>
-          <option value="11">Other</option>
+          <option value="1">Aluminium - Install/Replace</option>
+          <option value="2">Aluminium Repair</option>
+          <option value="3">BrickFace Install/Replace</option>
+          <option value="4">BrickFace Repair</option>
+          <option value="5">Composite Wood - Install/Replace</option>
+          <option value="6">Composite Wood - Repair</option>
+          <option value="7">StoneFace- Install/Replace</option>
+          <option value="8">StoneFace- Repair</option>
+          <option value="9">Stucco- Install/Replace</option>
+          <option value="10">Stucco - Repair</option>
+          <option value="11">Vinyl- Install/Replace</option>
+          <option value="12">Vinyl-Repair</option>
+          <option value="13">Other Repair</option>
         </select>
-        <div class="error" *ngIf="errors['bathtype']">{{ errors['bathtype'] }}</div>
+        <div class="error" *ngIf="errors['Sidingtype']">{{ errors['Sidingtype'] }}</div>
       </div>
       <div class="question">
         <label for="ProjectNature">What is the nature of your project?</label>
@@ -197,7 +199,7 @@
       </div>
       <div class="question">
         <label for="BriefRequirement">Brief Description</label>
-        <textarea id="BriefRequirement" [(ngModel)]="BriefRequirement" name="BriefRequirement" rows="4" placeholder="Please provide a brief description of your bathroom remodeling needs..."></textarea>
+        <textarea id="BriefRequirement" [(ngModel)]="BriefRequirement" name="BriefRequirement" rows="4" placeholder="Please provide a brief description of your siding needs..."></textarea>
         <div class="error" *ngIf="errors['BriefRequirement']">{{ errors['BriefRequirement'] }}</div>
       </div>
     </div>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bath-quote": {
+    "siding-quote": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "bath-quote:build:production"
+              "buildTarget": "siding-quote:build:production"
             },
             "development": {
-              "buildTarget": "bath-quote:build:development"
+              "buildTarget": "siding-quote:build:development"
             }
           },
           "defaultConfiguration": "development"
